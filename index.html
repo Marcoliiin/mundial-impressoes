@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mundial Impressões — Pôsteres da cultura pop</title>
-    <meta name="description" content="Mundial Impressões: pôsteres impressos em alta qualidade. Animes, mangás, capas de álbuns, filmes e tudo que você ama. Tamanhos 30x40, 45x60 e 60x80." />
+    <title>POP PRINT — Pôsteres da cultura pop</title>
+    <meta name="description" content="POP PRINT: pôsteres impressos em alta qualidade. Animes, mangás, capas de álbuns, filmes e tudo que você ama. Tamanhos 30x40, 45x60 e 60x80." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -15,13 +15,14 @@
     <header class="topbar">
         <div class="container topbar-inner">
             <a class="brand" href="#topo">
-                <span class="brand-mark">M</span>
-                <span class="brand-name">Mundial <em>Impressões</em></span>
+                <span class="brand-mark">P</span>
+                <span class="brand-name">POP <em>Print</em></span>
             </a>
             <nav class="nav">
                 <a href="#sobre">Sobre</a>
                 <a href="#categorias">Categorias</a>
                 <a href="#tamanhos">Tamanhos</a>
+                <a href="#simulador">Simulador</a>
                 <a href="#galeria">Galeria</a>
                 <a href="#contato" class="nav-cta">Encomendar</a>
             </nav>
@@ -61,17 +62,17 @@
             <div class="hero-visual" aria-hidden="true">
                 <div class="frame frame-a">
                     <span class="tape tape-top"></span>
-                    <img src="assets/poster-igor.jpg" alt="" />
+                    <img src="assets/igor.jpg" alt="" />
                     <span class="frame-tag">VOL. 01</span>
                 </div>
                 <div class="frame frame-b">
                     <span class="tape tape-top"></span>
-                    <img src="assets/bts-grammy.webp" alt="" />
+                    <img src="assets/bts.webp" alt="" />
                     <span class="frame-tag">VOL. 02</span>
                 </div>
                 <div class="frame frame-c">
                     <span class="tape tape-top"></span>
-                    <img src="assets/poster-chainsaw-man.jpg" alt="" />
+                    <img src="assets/chainsawman.jpg" alt="" />
                     <span class="frame-tag">VOL. 03</span>
                 </div>
                 <div class="hero-badge">
@@ -108,12 +109,12 @@
                 <span class="eyebrow eyebrow-light">Sobre nós</span>
                 <h2>Impressão pra fã,<br/>feita por fã.</h2>
                 <p>
-                    A <strong>Mundial Impressões</strong> nasceu pra atender dois mundos que a gente ama:
+                    A <strong>POP PRINT</strong> nasceu pra atender dois mundos que a gente ama:
                     o universo <em>geek</em> — animes, mangás, filmes, jogos — e o universo <em>musical</em>,
                     com capas icônicas, álbuns favoritos e shows inesquecíveis.
                 </p>
                 <p>
-                    Cada pôster é impresso com tinta de qualidade arquivística em papel fosco premium,
+                    Cada pôster é impresso com tinta de qualidade arquivística em papel fotográfico premium,
                     garantindo cores vivas e durabilidade por anos sem desbotar.
                 </p>
             </div>
@@ -128,7 +129,7 @@
                 </div>
                 <div class="stat">
                     <span class="stat-num">100%</span>
-                    <span class="stat-label">papel fosco<br/>premium</span>
+                    <span class="stat-label">papel fotográfico<br/>premium</span>
                 </div>
             </div>
         </div>
@@ -241,6 +242,97 @@
         </div>
     </section>
 
+    <section id="simulador" class="preview">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Simulador</span>
+                <h2>Veja como ficará seu pôster.</h2>
+                <p class="section-sub">Anexe sua imagem, escolha o tamanho e o cenário — a gente mostra o resultado na hora.</p>
+            </div>
+
+            <div class="preview-grid">
+                <div class="preview-controls">
+                    <div class="preview-step">
+                        <div class="step-head">
+                            <span class="step-num">01</span>
+                            <h3>Anexe sua imagem</h3>
+                        </div>
+                        <label class="upload-box" for="upload-input">
+                            <input type="file" id="upload-input" accept="image/*" hidden />
+                            <div class="upload-inner">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="17 8 12 3 7 8"/>
+                                    <line x1="12" y1="3" x2="12" y2="15"/>
+                                </svg>
+                                <span class="upload-text">Clique pra escolher arquivo</span>
+                                <span class="upload-hint" id="upload-hint">JPG, PNG ou WEBP</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="preview-step">
+                        <div class="step-head">
+                            <span class="step-num">02</span>
+                            <h3>Escolha o tamanho</h3>
+                        </div>
+                        <div class="size-options" id="size-options">
+                            <button type="button" class="size-option" data-size="30x40">
+                                <span class="size-option-num">30 × 40</span>
+                                <span class="size-option-label">Pequeno</span>
+                            </button>
+                            <button type="button" class="size-option active" data-size="45x60">
+                                <span class="size-option-num">45 × 60</span>
+                                <span class="size-option-label">Médio</span>
+                            </button>
+                            <button type="button" class="size-option" data-size="60x80">
+                                <span class="size-option-num">60 × 80</span>
+                                <span class="size-option-label">Grande</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="preview-step">
+                        <div class="step-head">
+                            <span class="step-num">03</span>
+                            <h3>Escolha o cenário</h3>
+                        </div>
+                        <div class="scenario-options">
+                            <button type="button" class="scenario-option active" data-scenario="sala">
+                                <div class="scenario-thumb">
+                                    <img src="assets/mockup-sala.jpeg" alt="" />
+                                </div>
+                                <span class="scenario-label">Sala</span>
+                            </button>
+                            <button type="button" class="scenario-option disabled" disabled>
+                                <div class="scenario-thumb scenario-thumb-empty">
+                                    <span>Em breve</span>
+                                </div>
+                                <span class="scenario-label">Quarto</span>
+                            </button>
+                            <button type="button" class="scenario-option disabled" disabled>
+                                <div class="scenario-thumb scenario-thumb-empty">
+                                    <span>Em breve</span>
+                                </div>
+                                <span class="scenario-label">Setup</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preview-display">
+                    <div class="preview-stage">
+                        <img class="preview-bg" src="assets/mockup-sala.jpeg" alt="Cenário sala" />
+                        <div class="preview-poster" id="preview-poster">
+                            <span class="preview-empty">Anexe uma imagem<br/>pra ver o resultado</span>
+                        </div>
+                    </div>
+                    <p class="preview-caption">Pré-visualização aproximada do tamanho real na parede.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="galeria" class="gallery">
         <div class="container">
             <div class="gallery-head">
@@ -257,7 +349,7 @@
                     <span class="poster-tape poster-tape-tl"></span>
                     <span class="poster-tape poster-tape-tr"></span>
                     <div class="poster-image">
-                        <img src="assets/poster-igor.jpg" alt="Pôster do álbum IGOR de Tyler, the Creator" />
+                        <img src="assets/igor.jpg" alt="Pôster do álbum IGOR de Tyler, the Creator" />
                     </div>
                     <figcaption>
                         <div class="poster-meta">
@@ -273,7 +365,7 @@
                     <span class="poster-tape poster-tape-tl"></span>
                     <span class="poster-tape poster-tape-tr"></span>
                     <div class="poster-image">
-                        <img src="assets/poster-demon-slayer.jpg" alt="Pôster do anime Demon Slayer com Tanjiro e Nezuko" />
+                        <img src="assets/demonslayer.jpg" alt="Pôster do anime Demon Slayer com Tanjiro e Nezuko" />
                     </div>
                     <figcaption>
                         <div class="poster-meta">
@@ -289,7 +381,7 @@
                     <span class="poster-tape poster-tape-tl"></span>
                     <span class="poster-tape poster-tape-tr"></span>
                     <div class="poster-image">
-                        <img src="assets/poster-chainsaw-man.jpg" alt="Pôster do mangá Chainsaw Man volume 1" />
+                        <img src="assets/chainsawman.jpg" alt="Pôster do mangá Chainsaw Man volume 1" />
                     </div>
                     <figcaption>
                         <div class="poster-meta">
@@ -317,26 +409,26 @@
                 </p>
                 <div class="contact-actions">
                     <a class="btn btn-primary" href="https://wa.me/5545999143864" target="_blank" rel="noopener">Falar no WhatsApp</a>
-                    <a class="btn btn-ghost" href="mailto:mundialimpressoes@gmail.com.br">mundialimpressoes@gmail.com.br</a>
+                    <a class="btn btn-ghost" href="mailto:popprint@gmail.com.br">popprint@gmail.com.br</a>
                 </div>
 
                 <ul class="contact-socials">
                     <li>
-                        <a href="https://instagram.com/mundialimpressoes" target="_blank" rel="noopener" aria-label="Instagram">
+                        <a href="https://instagram.com/popprint" target="_blank" rel="noopener" aria-label="Instagram">
                             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="3" y="3" width="18" height="18" rx="5"/>
                                 <circle cx="12" cy="12" r="4"/>
                                 <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/>
                             </svg>
-                            <span>@mundialimpressoes</span>
+                            <span>@popprint</span>
                         </a>
                     </li>
                     <li>
-                        <a href="https://tiktok.com/@mundialimpressoes" target="_blank" rel="noopener" aria-label="TikTok">
+                        <a href="https://tiktok.com/@popprint" target="_blank" rel="noopener" aria-label="TikTok">
                             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                                 <path d="M19.5 6.8c-1.5-.3-2.8-1.2-3.5-2.5-.3-.5-.5-1.1-.5-1.7v-.3h-3v12.4c0 .5-.1 1-.4 1.4-.5.9-1.5 1.4-2.5 1.4-1.6 0-2.9-1.3-2.9-2.9s1.3-2.9 2.9-2.9c.3 0 .6 0 .9.1V8.7c-.3 0-.6-.1-.9-.1-3.3 0-5.9 2.7-5.9 5.9s2.7 5.9 5.9 5.9 5.9-2.7 5.9-5.9V9.1c1.2.7 2.6 1.2 4 1.2v-3c-.1 0 0 0 0-.5z"/>
                             </svg>
-                            <span>@mundialimpressoes</span>
+                            <span>@popprint</span>
                         </a>
                     </li>
                     <li>
@@ -355,14 +447,14 @@
     <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-brand">
-                <span class="brand-mark">M</span>
-                <span class="brand-name">Mundial <em>Impressões</em></span>
+                <span class="brand-mark">P</span>
+                <span class="brand-name">POP <em>Print</em></span>
             </div>
-            <p class="footer-tag">Pôsteres feitos com carinho pra fãs de música, cinema, animes e mangás.</p>
+            <p class="footer-tag">Pôsteres feitos com carinho pra fãs de música, cinema, animes e cultura pop.</p>
 
             <ul class="footer-socials">
                 <li>
-                    <a href="https://instagram.com/mundialimpressoes" target="_blank" rel="noopener" aria-label="Instagram">
+                    <a href="https://instagram.com/popprint" target="_blank" rel="noopener" aria-label="Instagram">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="3" y="3" width="18" height="18" rx="5"/>
                             <circle cx="12" cy="12" r="4"/>
@@ -371,7 +463,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://tiktok.com/@mundialimpressoes" target="_blank" rel="noopener" aria-label="TikTok">
+                    <a href="https://tiktok.com/@popprint" target="_blank" rel="noopener" aria-label="TikTok">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
                             <path d="M19.5 6.8c-1.5-.3-2.8-1.2-3.5-2.5-.3-.5-.5-1.1-.5-1.7v-.3h-3v12.4c0 .5-.1 1-.4 1.4-.5.9-1.5 1.4-2.5 1.4-1.6 0-2.9-1.3-2.9-2.9s1.3-2.9 2.9-2.9c.3 0 .6 0 .9.1V8.7c-.3 0-.6-.1-.9-.1-3.3 0-5.9 2.7-5.9 5.9s2.7 5.9 5.9 5.9 5.9-2.7 5.9-5.9V9.1c1.2.7 2.6 1.2 4 1.2v-3c-.1 0 0 0 0-.5z"/>
                         </svg>
@@ -385,7 +477,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="mailto:mundialimpressoes@gmail.com.br" aria-label="Email">
+                    <a href="mailto:popprint@gmail.com.br" aria-label="Email">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="3" y="5" width="18" height="14" rx="2"/>
                             <path d="m3 7 9 6 9-6"/>
@@ -399,9 +491,51 @@
                 Reservamo-nos o direito de recusar conteúdos protegidos, ofensivos ou ilegais.
             </p>
 
-            <p class="footer-copy">© 2026 Mundial Impressões. Todos os direitos reservados.</p>
+            <p class="footer-copy">© 2026 POP PRINT. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        (function() {
+            const uploadInput   = document.getElementById('upload-input');
+            const uploadHint    = document.getElementById('upload-hint');
+            const previewPoster = document.getElementById('preview-poster');
+            const sizeOptions   = document.querySelectorAll('#size-options .size-option');
+
+            // Mapeamento aproximado entre o tamanho do pôster e a largura
+            // ocupada na parede do cenário (em % do palco)
+            const sizeMap = {
+                '30x40': '10%',
+                '45x60': '14%',
+                '60x80': '19%'
+            };
+
+            // Upload de imagem
+            uploadInput.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+
+                uploadHint.textContent = file.name;
+
+                const reader = new FileReader();
+                reader.onload = (ev) => {
+                    previewPoster.style.backgroundImage = `url(${ev.target.result})`;
+                    const empty = previewPoster.querySelector('.preview-empty');
+                    if (empty) empty.remove();
+                };
+                reader.readAsDataURL(file);
+            });
+
+            // Seleção de tamanho
+            sizeOptions.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    sizeOptions.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    previewPoster.style.width = sizeMap[btn.dataset.size];
+                });
+            });
+        })();
+    </script>
 
 </body>
 </html>
